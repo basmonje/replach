@@ -8,6 +8,8 @@ import Gallery from '../components/Gallery';
 import Search from '../components/Search';
 import LoadMore from '../components/LoadMore';
 
+import ErrorBoundary from '../components/ErrorBoundary';
+
 // Patrón de diseño: Render props
 const Home = () => {
   const { photos, loading, error, getLoadMore } = useContext(PhotosContext);
@@ -17,7 +19,7 @@ const Home = () => {
   }
 
   return (
-    <>
+    <ErrorBoundary>
       <SEO title="Cientos de imagenes gratuitas" />
       <Search type="photos" />
       {error ? (
@@ -28,7 +30,7 @@ const Home = () => {
           <LoadMore handleClick={getLoadMore} />
         </>
       )}
-    </>
+    </ErrorBoundary>
   );
 };
 

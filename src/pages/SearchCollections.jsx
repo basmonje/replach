@@ -8,6 +8,8 @@ import Pagination from '../components/Pagination';
 import Search from '../components/Search';
 import Message from '../components/Message';
 
+import ErrorBoundary from '../components/ErrorBoundary';
+
 // Patrón de diseño: Render props
 const SearchCollections = () => {
   const { error, collections, loading, query, page, totalCount } = useContext(
@@ -19,7 +21,7 @@ const SearchCollections = () => {
   }
 
   return (
-    <>
+    <ErrorBoundary>
       <SEO title={`Buscando: ${query}`} />
       <Search type="collections" />
       {error ? (
@@ -34,7 +36,7 @@ const SearchCollections = () => {
           />
         </>
       )}
-    </>
+    </ErrorBoundary>
   );
 };
 

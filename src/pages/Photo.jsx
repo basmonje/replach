@@ -6,6 +6,8 @@ import Message from '../components/Message';
 import Photo from '../components/Photo';
 import SEO from '../components/SEO';
 
+import ErrorBoundary from '../components/ErrorBoundary';
+
 // Patrón de diseño: Render props
 const PhotoPage = () => {
   const { error, loading, data } = useContext(PhotoContext);
@@ -14,13 +16,11 @@ const PhotoPage = () => {
     return <Loading />;
   }
 
-  console.log(data)
-
   return (
-    <div>
+    <ErrorBoundary>
       <SEO title={`Foto de ${data.user?.username}` || ''} />
       {error ? <Message title={error} /> : <Photo data={data} />}
-    </div>
+    </ErrorBoundary>
   );
 };
 
