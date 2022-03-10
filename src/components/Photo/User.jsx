@@ -8,7 +8,10 @@ import Avatar from '../Avatar';
 const User = ({ user, id }) => (
   <Container as="section" className="-px-4 -py-6 -py-md-9">
     <Wrapper>
-      <a href={user.links.html} target="_blank">
+      <a
+        href={`${user.links.html}?utm_source=replach&utm_medium=referral`}
+        target="_blank"
+      >
         <Avatar
           src={user.profile_image.small}
           alt={`${user.firstname} ${user.lastname}`}
