@@ -24,7 +24,7 @@ const Footer = () => (
       <p>Replach © {new Date().getFullYear()}</p>
       <span>
         Powered by{' '}
-        <LinkCustom href="https://unsplash.com/developers">Unsplash</LinkCustom>
+        <LinkCustom href="https://unsplash.com/">Unsplash</LinkCustom>
         , <LinkCustom href="https://es.reactjs.org/">React</LinkCustom> y{' '}
         <LinkCustom href="https://github.com/">Github</LinkCustom>
       </span>

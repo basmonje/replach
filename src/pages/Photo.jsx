@@ -14,6 +14,8 @@ const PhotoPage = () => {
     return <Loading />;
   }
 
+  console.log(data)
+
   return (
     <div>
       <SEO title={`Foto de ${data.user?.username}` || ''} />

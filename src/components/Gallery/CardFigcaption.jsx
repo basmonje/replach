@@ -8,7 +8,11 @@ const CardFigcaption = ({ id, user }) => (
   <figcaption className="-bg-black-400">
     <Link to={`/photo/${id}`} className="nav-photo"></Link>
     <div className="-flex -content-between -items-center -flex-column -px-6 -px-md-3 -my-2">
-      <a href={user.links.html} target="_blank" className="-color-white">
+      <a
+        href={`${user.links.html}?utm_source=replach&utm_medium=referral`}
+        target="_blank"
+        className="-color-white"
+      >
         <div className="-flex -items-center -gap-2 -close-span">
           <Avatar
             src={user.profile_image.small}

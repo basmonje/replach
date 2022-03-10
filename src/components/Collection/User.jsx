@@ -6,7 +6,7 @@ const User = ({ user, total }) => (
   <Container as="section">
     <div className="-flex -items-center -content-between -mt-3">
       <a
-        href={user.links.html}
+        href={`${user.links.html}?utm_source=replach&utm_medium=referral`}
         target="_blank"
         className="-flex -gap-2 -flex-row -items-center -my-5 -color-white"
       >
