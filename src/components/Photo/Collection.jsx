@@ -32,9 +32,9 @@ const Collection = ({
   return (
     <Article>
       <header className="-flex -flex-row -items-center -content-between -mb-3">
-        <a className="title-3" href={`/collection/${id}`}>
+        <Link className="title-3" to={`/collection/${id}`}>
           <span>{title}</span>
-        </a>
+        </Link>
         <span>{total}</span>
       </header>
       <section>
