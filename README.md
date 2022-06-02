@@ -43,7 +43,3 @@ API_KEY_UNSPLASH=*****YOUR_SECRET_KEY*****
 - Collections - Lista de colecciones
 - Collection - Ver detalles de colección por `:id`
 - SearchCollections - Buscar colecciones por `:query`
-
-# Investigar: Limites de errores
-
-Los límites de errores nos ayudan a capturar los errores en nuestra aplicación, así podemos entregar una mejor experiencia de usuario mostrando información acerca del error que ha ocurrido, de lo contrario nuestra app se rompería.
